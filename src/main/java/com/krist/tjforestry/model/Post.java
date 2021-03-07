@@ -5,20 +5,22 @@ import java.time.LocalDate;
 public class Post {
     private int id;
     private String description;
-    private int area;
-    private String city;
+    private double area;
+    private int locationId;
     private LocalDate dateCreated;
     private String username;
     private boolean favorite;
+    private String email;
 
-    public Post(int name, String description, int area, String city, LocalDate dateCreated, String username, boolean favorite) {
+    public Post(int name, String description, double area, int locationId, LocalDate dateCreated, String username, boolean favorite, String email) {
         this.id = name;
         this.description = description;
         this.area = area;
-        this.city = city;
+        this.locationId = locationId;
         this.dateCreated = dateCreated;
         this.username = username;
         this.favorite = favorite;
+        this.email = email;
     }
 
     public int getId() {
@@ -37,20 +39,20 @@ public class Post {
         this.description = description;
     }
 
-    public int getArea() {
+    public double getArea() {
         return area;
     }
 
-    public void setArea(int area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
-    public String getCity() {
-        return city;
+    public int getLocationId() {
+        return locationId;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
     }
 
     public LocalDate getDateCreated() {
@@ -76,5 +78,9 @@ public class Post {
     public void setFavorite(boolean favorite) {
         this.favorite = favorite;
     }
+
+    public String getEmail() {return email; }
+
+    public void setEmail() { this.email = email; }
 
 }

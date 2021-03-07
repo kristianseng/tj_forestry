@@ -7,8 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -24,9 +26,23 @@ public class PostController {
     }
 
     @RequestMapping("/post/{id}")
-    public  String PostDetails(@PathVariable int id, ModelMap modelMap) {
+    public String PostDetails(@PathVariable int id, ModelMap modelMap) {
         Post post = postRepository.findById(id);
         modelMap.put("post", post);
         return "post-details";
+    }
+
+    @RequestMapping("/favorites")
+    public String FavoritePage(ModelMap modelMap) {
+        List<Post> list = postRepository.getFavoritedPosts();
+        modelMap.put("favorites", list);
+        return "favorites";
+    }
+
+    @RequestMapping(value = {"/", "/favorites", "/locations"}, params="q")
+    public String Search(@RequestParam String q, ModelMap modelMap) {
+        List<Post> list = postRepository.getPostByName(q);
+        modelMap.put("posts", list);
+        return "home";
     }
 }

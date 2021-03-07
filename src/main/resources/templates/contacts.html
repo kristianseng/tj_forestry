@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" th:href="@{/favicon.png}" />
+
+    <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" th:href="@{/app.css}" />
+
+    <title>TJ-Forestry | Home</title>
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container">
+                <a th:href="@{/}" class="brand-logo">TJ<span>-</span>Forestry</a>
+                <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a th:href="@{/}">Sludinājumi</a></li>
+                    <li><a th:href="@{/locations}">Atlasīt pēc novada</a></li>
+                    <li><a th:href="@{/favorites}">Izceltie</a></li>
+                    <li class="active"><a th:href="@{/contacts}">Kontakti</a></li>
+                </ul>
+                <ul id="mobile-nav" class="side-nav">
+                    <li class="active"><a th:href="@{/}">Sludinājumi</a></li>
+                    <li><a th:href="@{/categories}">Atlasīt pēc novada</a></li>
+                    <li><a th:href="@{/favorites}">Izceltie</a></li>
+                    <li><a th:href="@{/contacts}">Kontakti</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <section class="layout_padding section padding_bottom_0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_section margin_top_30">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form_cont">
+                                    <form action="index.html">
+                                        <fieldset>
+                                            <div class="field">
+                                                <input type="text" name="name" placeholder="Vārds" />
+                                            </div>
+                                            <div class="field">
+                                                <input type="email" name="email" placeholder="E-pasts" />
+                                            </div>
+                                            <div class="field">
+                                                <input type="text" name="phone" placeholder="Telefona numurs" />
+                                            </div>
+                                            <div class="field">
+                                                <textarea placeholder="Ziņojums" ></textarea>
+                                            </div>
+                                            <div class="field center">
+                                                <button>Nosūtīt</button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
+<script th:src="@{/vendor/materialize/js/materialize.js}"></script>
+<script th:src="@{/app.js}"></script>
+</body>
+</html>

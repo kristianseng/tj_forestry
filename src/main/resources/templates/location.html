@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" th:href="@{/favicon.png}" />
+
+    <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" th:href="@{/app.css}" />
+
+    <title th:text="'TJ | ' + ${location.location}"> Forestry | Location</title>
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+        <div class="container">
+            <a th:href="@{/}" class="brand-logo">TJ<span>-</span>Forestry</a>
+            <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a th:href="@{/}">Sludinājumi</a></li>
+                <li><a th:href="@{/locations}">Atlasīt pēc novada</a></li>
+                <li><a th:href="@{/favorites}">Izceltie</a></li>
+                <li><a th:href="@{/contacts}">Kontakti</a></li>
+            </ul>
+            <ul id="mobile-nav" class="side-nav">
+                <li><a th:href="@{/}">Sludinājumi</a></li>
+                <li><a th:href="@{/locations}">Atlasīt pēc novada</a></li>
+                <li><a th:href="@{/favorites}">Izceltie</a></li>
+                <li><a th:href="@{/contacts}">Kontakti</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="gifs container">
+
+    <div th:text="${location.location}" class="chip"></div>
+    <div class="row">
+
+        <div th:each="post:${posts}" class="col s12 l4">
+            <!--
+                    In the a tag, make the href attribute point to
+                    the GIF detail page using the 'name' field of
+                    the 'gif' object from the loop above
+             -->
+            <a th:href="@{'/post/' + ${post.id}}">
+                <!--
+                    In the img tag, make the src attribute point
+                    to the static GIF image, according to the 'name'
+                    field of the 'gif' object from the loop above
+                -->
+                <img th:src="@{'/images/' + ${post.id}} + '.jpeg'" />
+                <a href="#" th:class="(${post.favorite} ? 'un' : '') + 'mark favorite'"></a>
+                <h6  th:text="${post.description}"></h6>
+                <p th:text="'( ' + ${post.area} + ' hektāri)'"></p>
+                <p th:text="${post.username}"></p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
+<script th:src="@{/vendor/materialize/js/materialize.js}"></script>
+<script th:src="@{/app.js}"></script>
+</body>
+</html>
