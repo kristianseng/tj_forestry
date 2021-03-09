@@ -19,3 +19,9 @@ jQuery - few functions
 
 # Acknowledgments
 Styling and design from Teamtreehouse
+
+
+# Possible implemenations
+
+* Hibernate to store post, location and contact objects
+* User authentification & ability or users to add post objects
