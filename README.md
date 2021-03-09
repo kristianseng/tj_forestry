@@ -1,20 +1,20 @@
-# TJ-Forestry
+# TJ-Forestry\
 
-prototype of forest land seller's platform in Latvia
+prototype of forest land seller's platform in Latvia\
 
 
 ![](project-preview.gif)
 
-Website - https://tj-forestry.herokuapp.com/
+Website - https://tj-forestry.herokuapp.com/\
 
 
-Built With -
+Built With -\
 
-Spring boot - The web framework used
-Gradle - Dependency Management
-Thymeleaf - used to populate HTML
-jQuery - few functions
+Spring boot - The web framework used\
+Gradle - Dependency Management\
+Thymeleaf - used to populate HTML\
+jQuery - few functions\
 
 
-Acknowledgments
+Acknowledgments\
 Styling and design from Teamtreehouse
