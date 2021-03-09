@@ -9,6 +9,11 @@ p {
     margin-bottom: 5px;
     font-style: italic;
 }
+
+fieldset {
+    margin:55px;
+}
+
 nav {
     background-color: #126530;
     box-shadow: none;

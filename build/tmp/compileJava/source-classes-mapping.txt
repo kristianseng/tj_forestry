@@ -6,13 +6,13 @@ com/krist/tjforestry/model/Contact.java
  com.krist.tjforestry.model.Contact
 com/krist/tjforestry/model/Post.java
  com.krist.tjforestry.model.Post
-com/krist/tjforestry/controller/ContactController.java
- com.krist.tjforestry.controller.ContactController
+com/krist/tjforestry/controller/PostController.java
+ com.krist.tjforestry.controller.PostController
 com/krist/tjforestry/data/PostRepository.java
  com.krist.tjforestry.data.PostRepository
 com/krist/tjforestry/controller/LocationController.java
  com.krist.tjforestry.controller.LocationController
 com/krist/tjforestry/data/LocationRepository.java
  com.krist.tjforestry.data.LocationRepository
-com/krist/tjforestry/controller/PostController.java
- com.krist.tjforestry.controller.PostController
+com/krist/tjforestry/controller/ContactController.java
+ com.krist.tjforestry.controller.ContactController

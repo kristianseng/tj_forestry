@@ -20,6 +20,4 @@ public class ContactController {
         model.addAttribute("contact", contact);
         return "Paldies par Jūsu ziņojumu, tuvākajā laikā sazināsimies ar Jums";
     }
-
-
 }
