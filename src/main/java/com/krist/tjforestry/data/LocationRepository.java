@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class LocationRepository {
 
-    private List<Location> ALL_LOCATIONS = Arrays.asList(
+    private static final List<Location> ALL_LOCATIONS = Arrays.asList(
             new Location(1,"Bauskas novads"),
             new Location(2, "Jelgavas novads"),
             new Location(3, "Rēzeknes novads")
@@ -26,5 +26,10 @@ public class LocationRepository {
             }
         }
         return null;
+    }
+
+    public String getAreaName(int id) {
+        Location theOne = ALL_LOCATIONS.get(id);
+        return theOne.getLocation();
     }
 }

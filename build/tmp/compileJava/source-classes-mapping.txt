@@ -8,6 +8,8 @@ com/krist/tjforestry/model/Post.java
  com.krist.tjforestry.model.Post
 com/krist/tjforestry/controller/ContactController.java
  com.krist.tjforestry.controller.ContactController
+com/krist/tjforestry/model/Contact.java
+ com.krist.tjforestry.model.Contact
 com/krist/tjforestry/data/PostRepository.java
  com.krist.tjforestry.data.PostRepository
 com/krist/tjforestry/controller/LocationController.java

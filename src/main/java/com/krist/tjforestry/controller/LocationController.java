@@ -22,7 +22,7 @@ public class LocationController {
     @Autowired
     private PostRepository postRepository;
 
-    @RequestMapping("/locations")
+    @RequestMapping(value = "/locations")
     public String listLocations(ModelMap modelMap) {
         List<Location> list = locationRepository.getALL_LOCATIONS();
         modelMap.put("locations", list);

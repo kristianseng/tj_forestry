@@ -48,22 +48,33 @@
                         <img class="circle" th:src="@{/images/no_avatar.jpg}" alt="avatar" />
                     </div>
                     <div class="col s9">
-                        <h4 th:text="${post.username}">1111111</h4>
-                        <p th:text="'Uploaded on ' + ${post.dateCreated}">Post created on Oct 30 1111</p>
+                        <h4 th:text="${post.username}"></h4>
+                        <p th:text="'Meža platība: ' + ${post.area} + ' hektāri'"></p>
+                        <p th:text="'Atrašanās vieta: ' + ${locationName}"></p>
+                        <p th:text="'E-pasts saziņai - ' + ${post.email}"></p>
+                        <p th:text="'Sludinājums izveidots - ' + ${post.dateCreated}"></p>
                     </div>
                 </div>
             </div>
             <div class="col s12 l6">
                 <div class="share">
-                    <a class="btn right" href="#">Copy</a>
-                    <span th:text="'http://giffy.fy/' + ${post.id}">URL</span>
+                    <button class="btn right" onclick="copyToClipboard('#copyURL')">Kopēt</button>
+                    <span id="copyURL" th:text="'https://tj-forestry.herokuapp.com/post/' + ${post.id}">URL</span>
                 </div>
             </div>
         </div>
     </div>
-
-<script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
-<script th:src="@{/vendor/materialize/js/materialize.js}"></script>
-<script th:src="@{/app.js}"></script>
+    <script>
+            function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+            }
+    </script>
+    <script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
+    <script th:src="@{/vendor/materialize/js/materialize.js}"></script>
+    <script th:src="@{/app.js}"></script>
 </body>
 </html>

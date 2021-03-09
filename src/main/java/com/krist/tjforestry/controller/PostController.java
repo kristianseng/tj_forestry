@@ -1,6 +1,8 @@
 package com.krist.tjforestry.controller;
 
+import com.krist.tjforestry.data.LocationRepository;
 import com.krist.tjforestry.data.PostRepository;
+import com.krist.tjforestry.model.Location;
 import com.krist.tjforestry.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,9 @@ public class PostController {
     @Autowired
     private PostRepository postRepository;
 
+    @Autowired
+    private LocationRepository locationRepository;
+
     @RequestMapping("/")
     public String listGifs(ModelMap modelMap) {
         List<Post> posts = postRepository.getAllPosts();
@@ -28,7 +33,10 @@ public class PostController {
     @RequestMapping("/post/{id}")
     public String PostDetails(@PathVariable int id, ModelMap modelMap) {
         Post post = postRepository.findById(id);
+        int loci = post.getLocationId();
         modelMap.put("post", post);
+        String location = locationRepository.getAreaName(loci);
+        modelMap.put("locationName", location);
         return "post-details";
     }
 

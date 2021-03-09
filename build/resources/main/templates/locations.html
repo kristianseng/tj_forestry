@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
-    <title>TJ-Forestry | Home</title>
+    <title>TJ-Forestry | Locations </title>
 </head>
 <body>
 <div class="navbar-fixed">
@@ -26,7 +26,7 @@
             </ul>
             <ul id="mobile-nav" class="side-nav">
                 <li><a th:href="@{/}">Sludinājumi</a></li>
-                <li class="active"><a th:href="@{/locations}">Atlasīt pēc novada</a></li>
+                <li class="active"><a th:href="@{/categories}">Atlasīt pēc novada</a></li>
                 <li><a th:href="@{/favorites}">Izceltie</a></li>
                 <li><a th:href="@{/contacts}">Kontakti</a></li>
             </ul>
@@ -38,33 +38,21 @@
         <div class="col s12">
             <form action="#" method="get">
                 <div class="input-field">
-                    <input name="q" type="search" placeholder="Meklēt sludinājumu..." required="required" autocomplete="off"/>
+                    <input name="q" type="search" class="search-fnc" placeholder="Meklēt sludinājumu..." required="required" autocomplete="off"/>
                     <i class="material-icons">search</i>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
 <div class="categories container">
     <div th:each="location : ${locations}" class="row">
-        <!--
-            Repeat the div element for each object in the 'categories'
-            collection of the model map. Each object in the loop
-            should be named 'category'
-        -->
+
         <div class="col s12 l4">
             <div class="card">
                 <div class="card-content">
                     <div class="card-title">
-                        <!--
-                            Set the href attribute of the a tag to be the URI to
-                            a specific category according to the category's id.
-                            For example, /category/1 or /category/2
-
-                            Then, set the text between the a tags to be the category name,
-                            coming from the 'name' field of the 'category' object
-                            in the model map
-                        -->
                         <a th:href="@{'/location/' + ${location.id}}" th:text="${location.location}"></a>
                     </div>
                 </div>

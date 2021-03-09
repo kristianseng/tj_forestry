@@ -41,22 +41,23 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form_cont">
-                                    <form action="index.html">
+                                    <form action="#" th:object="${contact}" method="post">
                                         <fieldset>
                                             <div class="field">
-                                                <input type="text" name="name" placeholder="Vārds" />
+                                                <input type="text" th:field="*{name}" placeholder="Vārds" />
                                             </div>
                                             <div class="field">
-                                                <input type="email" name="email" placeholder="E-pasts" />
+                                                <input type="email" th:field="*{email}" placeholder="E-pasts" />
                                             </div>
                                             <div class="field">
-                                                <input type="text" name="phone" placeholder="Telefona numurs" />
+                                                <input placeholder="Telefona numurs" th:field="*{phone}" type="text"/>
                                             </div>
                                             <div class="field">
-                                                <textarea placeholder="Ziņojums" ></textarea>
+                                                <textarea placeholder="Ziņojums" th:field="*{message}"></textarea>
                                             </div>
                                             <div class="field center">
-                                                <button>Nosūtīt</button>
+                                                <button type="submit" value="Submit">Nosūtīt</button>
+                                            </div>
                                         </fieldset>
                                     </form>
                                 </div>
