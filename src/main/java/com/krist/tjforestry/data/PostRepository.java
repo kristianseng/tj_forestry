@@ -21,9 +21,9 @@ public class PostRepository {
             new Post(7, "Mežs atrodas skaistā vietā Dāviņu pagastā", 11, 1, LocalDate.of(2021, 2, 12), "Ivars S.", true, "Ivciks42@inbox.lv"),
             new Post(8, "Trīs hektāru mežs Sesavas pagastā", 2.9, 2, LocalDate.of(2020, 11, 15), "Reinis S.", true, "Reno.Silovs@inbox.lv"),
             new Post(9, "Jaunaudze", 1.9, 3, LocalDate.of(2021, 1, 12), "EG Forest", false, "EG_Forestry@gmail.com"),
-            new Post(10, "Cirsma Zeļenieku pagastā", 0.1, 2, LocalDate.of(2021, 2, 1), "EG Forest", true, "EG_Forestry@gmail.com"),
+            new Post(10, "Cirsma Rucavas pagastā", 0.1, 4, LocalDate.of(2021, 2, 1), "EG Forest", true, "EG_Forestry@gmail.com"),
             new Post(11, "Neizstrādāts mežs Valteķos", 3, 1, LocalDate.of(2021, 2, 3), "EG Forest", false, "EG_Forestry@gmail.com"),
-            new Post(12, "Mežs Vircavas pagastā", 2.1, 2, LocalDate.of(2021, 1, 7), "Reinis S.", true, "Reno.Silovs@inbox.lv"),
+            new Post(12, "Mežs Dunalkas pagastā", 2.1, 4, LocalDate.of(2021, 1, 7), "Reinis S.", true, "Reno.Silovs@inbox.lv"),
             new Post(13, "Daļēji izstrādāts mežs Stružānu pagastā", 1, 3, LocalDate.of(2021, 2, 15), "Ivars S.", false, "Ivciks42@inbox.lv"),
             new Post(14, "Cirsma Brunevu pagastā", 1, 1, LocalDate.of(2020, 2, 17), "SIA Īpašumi", false, "LatIpasumi@gmail.com"),
             new Post(15, "Bērzu mežs Bauskas novadā, Gailīšu pagastā", 1, 0, LocalDate.of(2020, 2, 19), "SIA Īpašumi", false, "LatIpasumi@gmail.com")

@@ -12,7 +12,8 @@ public class LocationRepository {
     private static final List<Location> ALL_LOCATIONS = Arrays.asList(
             new Location(1,"Bauskas novads"),
             new Location(2, "Jelgavas novads"),
-            new Location(3, "Rēzeknes novads")
+            new Location(3, "Rēzeknes novads"),
+            new Location(4, "Liepājas novads")
     );
 
     public List<Location> getALL_LOCATIONS() {

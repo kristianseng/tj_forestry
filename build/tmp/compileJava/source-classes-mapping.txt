@@ -2,14 +2,14 @@ com/krist/tjforestry/AppConfig.java
  com.krist.tjforestry.AppConfig
 com/krist/tjforestry/model/Location.java
  com.krist.tjforestry.model.Location
-com/krist/tjforestry/data/PostRepository.java
- com.krist.tjforestry.data.PostRepository
+com/krist/tjforestry/model/Contact.java
+ com.krist.tjforestry.model.Contact
 com/krist/tjforestry/model/Post.java
  com.krist.tjforestry.model.Post
 com/krist/tjforestry/controller/ContactController.java
  com.krist.tjforestry.controller.ContactController
-com/krist/tjforestry/model/Contact.java
- com.krist.tjforestry.model.Contact
+com/krist/tjforestry/data/PostRepository.java
+ com.krist.tjforestry.data.PostRepository
 com/krist/tjforestry/controller/LocationController.java
  com.krist.tjforestry.controller.LocationController
 com/krist/tjforestry/data/LocationRepository.java
