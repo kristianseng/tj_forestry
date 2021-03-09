@@ -1,6 +1,6 @@
 # TJ-Forestry
 
-prototype of forest land seller's platform in Latvia\
+prototype of forest land seller's platform in Latvia
 
 
 ![](project-preview.gif)
@@ -13,7 +13,7 @@ Website - https://tj-forestry.herokuapp.com/
 Spring boot - The web framework used\
 Gradle - Dependency Management\
 Thymeleaf - used to populate HTML\
-jQuery - few functions\
+jQuery - few functions
 
 
 # Acknowledgments
