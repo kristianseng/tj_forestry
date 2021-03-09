@@ -33,9 +33,9 @@ public class PostController {
     @RequestMapping("/post/{id}")
     public String PostDetails(@PathVariable int id, ModelMap modelMap) {
         Post post = postRepository.findById(id);
-        int loci = post.getLocationId();
+        int locId = post.getLocationId();
         modelMap.put("post", post);
-        String location = locationRepository.getAreaName(loci);
+        String location = locationRepository.getAreaName(locId);
         modelMap.put("locationName", location);
         return "post-details";
     }

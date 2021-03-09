@@ -29,7 +29,7 @@ public class LocationRepository {
     }
 
     public String getAreaName(int id) {
-        Location theOne = ALL_LOCATIONS.get(id);
+        Location theOne = ALL_LOCATIONS.get(id - 1);
         return theOne.getLocation();
     }
 }
