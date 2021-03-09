@@ -2,11 +2,11 @@
 
 prototype of forest land seller's platform in Latvia
 
-<kbd>
-![](project-preview.gif)
-</kbd>
 
-Website - https://tj-forestry.herokuapp.com/
+![](project-preview.gif)
+
+
+<kbd> Website </kbd> - https://tj-forestry.herokuapp.com/
 
 
 # Built With -
